@@ -1,0 +1,151 @@
+<html><head> 
+<!-- <base href="http://localhost"/> -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PX CarLive & PX MotorLiveapp 隱私權公告</title>
+<style>
+body {
+    font-family: "Microsoft JhengHei", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #fafafa;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #2980b9;
+    margin-bottom: 15px;
+}
+
+.last-updated {
+    text-align: right;
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-top: 30px;
+}
+
+.highlight {
+    background-color: #fff3cd;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+</style>
+</head>
+<body>
+
+<div class="container fade-in">
+    <h1>iCaming app 隱私權公告</h1>
+
+    <div class="section">
+        <h2>1. 隱私權保護政策的範圍</h2>
+        <p>歡迎您使用本APP。為確保您能安心使用本APP的服務，特此向您告知本APP的隱私權保護政策，以保障您的權益。請詳細閱讀以下內容：</p>
+        <p>隱私權政策內容，包括本APP如何處理在您使用APP服務時所收集到的個人識別資料。隱私權保護政策不適用於本APP以外的相關連結網站，也不適用於非本APP所委託或參與管理的人員。</p>
+    </div>
+
+    <div class="section">
+        <h2>2. 個人資料蒐集、處理及利用</h2>
+        <p>本APP不會蒐集個人資料。我們會收集以下資訊：</p>
+        <ul>
+            <li>裝置特定資訊（例如您的硬體型號、作業系統版本、唯一裝置識別碼），作為軟體授權的依據</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. 隱私權政策修訂</h2>
+        <p>本APP隱私權政策將因應需求隨時進行修正。修正後的條款將刊登於網站上。</p>
+        <div class="highlight">
+            本隱私權政策的修改權歸本APP所有。
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>4. 聯絡我們</h2>
+        <p>如果您對我們的隱私權政策有任何疑問，請聯繫我們：</p>
+        <p>公司名稱: TRANS ELECTRIC CO., LTD.</p>
+        <p>Email: bryankuo@fusionnextinc.com</p>
+        <p>地址: 503006台湾彰化縣花壇鄉 中山路二段７７１號</p>
+        <p>電話: +886 932 215 629</p>
+    </div>
+
+    <div class="last-updated">
+        最後更新日期：2025年2月20日
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 添加平滑滾動效果
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // 添加段落淡入效果
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    });
+
+    sections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'all 0.5s ease-in-out';
+        observer.observe(section);
+    });
+});
+</script>
+
+</body>
+</html>
